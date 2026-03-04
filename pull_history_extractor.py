@@ -97,7 +97,7 @@ def write_csv(chara_dict: dict) -> None:
     fieldnames = ["poolName", "charName", "rarity", "isFree", "isNew", "gachaTs"]
     for key, value in chara_dict.items():
         csv_filename = f"{BANNER_NAMES[key]}.csv".replace(" ", "_")
-        with open(csv_filename, mode='w', newline='') as file:
+        with open(csv_filename, mode='w', newline='', encoding="UTF-8") as file:
             writer = csv.DictWriter(file, fieldnames=fieldnames, extrasaction="ignore")
             writer.writeheader()
             writer.writerows(value)
