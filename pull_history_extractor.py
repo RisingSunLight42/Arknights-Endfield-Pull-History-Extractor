@@ -89,7 +89,6 @@ def get_all_pulls(generated_link: str, banner_list: list) -> dict:
     all_pulls_dict = {}
     for banner_type in banner_list:
         all_pulls_dict[banner_type] = get_banner_pulls(generated_link, banner_type)
-        break
     return all_pulls_dict
 
 
